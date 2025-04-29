@@ -1,0 +1,123 @@
+/*reset*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*body*/
+body{
+    font-family:'Arial',sans-serif ;
+    background: #f7f7f7;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/*container*/
+.container{
+    width:100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0,0,0.1);
+
+}
+/*heading*/
+h1{
+    text-align: center;
+    margin-bottom :20px;
+    color: #333;
+}
+
+/*task input*/
+.task-input-container{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.task-input-container input{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid#ccc;
+    border-radius: 5px;
+}
+.task-input-container button{
+    padding: 10px 15px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.task-input-container button:hover{
+    background: #0056b3;
+}
+/*filters*/
+.filters{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.filters .filter-btn{
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    background: none;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filters .filter-btn.active,
+.filters .filter-btn:hover{
+background: #007bff;
+color: white;
+}
+/*task -list*/
+.task-list{
+    list-style: none;
+}
+.task-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+.task-item .left{
+    display: flex;
+    align-items: center;
+}
+.task-item input[type="checkbox"]{
+    margin-right: 10px;
+}
+.task-item .completed{
+    text-decoration: line-through;
+    color:gray;
+
+}
+.delete-btn{
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+}
+.delete-btn:hover{
+    color: darkred;
+}
+/*responsive*/
+@media(max-width:600px){
+    .task-input-container{
+        flex-direction: column;
+    }
+    .task-input-container button{
+        width: 100%;
+    }
+}
